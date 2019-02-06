@@ -39,8 +39,8 @@
         </div>
 
     </header>
-    <nav><div id="hidden-menu" class="hidden"></div>
-        <ul id="nav" class="normal">
+    <nav>
+        <ul class="nav">
             <li><a href="#1" class="menu-item menu-item-first">Истории успеха</a></li>
             <li><a href="#2" class="menu-item">Видеоотзывы</a></li>
             <li><a href="#3" class="menu-item">Направления бизнеса</a></li>
@@ -212,8 +212,6 @@
 
 
 
-
-
     <script src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript">
@@ -252,21 +250,6 @@
                     scrollTop: $(_href).offset().top - 40 + "px"
                 });
                 return false;
-            });
-        });
-
-        /*fixed menu*/
-        $(document).ready(function() {
-            var $menu = $('#nav');
-            var $hidden = $('#hidden-menu');
-            $(window).scroll(function() {
-                if ($(this).scrollTop() > 112 && $menu.hasClass('normal')) {
-                    $menu.removeClass('normal').addClass('fix');
-                    $hidden.removeClass('hidden').addClass('visible');
-                } else if ($(this).scrollTop() <= 112 && $menu.hasClass('fix')) {
-                    $menu.removeClass('fix').addClass('normal');
-                    $hidden.removeClass('visible').addClass('hidden');
-                }
             });
         });
 
