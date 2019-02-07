@@ -205,7 +205,8 @@ nav {
     width: 472px;
     height: 287px;
     position: relative;
-    background-color: #fff;
+    background: #fff url(img/comments.jpg) no-repeat;
+    background-size: cover;
 }
 
 .video:before {
