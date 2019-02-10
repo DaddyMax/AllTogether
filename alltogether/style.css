@@ -1,3 +1,6 @@
+html {
+    font-size: 62.5%;
+}
 body {
     background-color: #fafafa;
     margin: 0;
@@ -8,25 +11,25 @@ body {
 
 ::-webkit-input-placeholder {
     color: #c5c4c4;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 400;
 }
 
 ::-moz-placeholder {
     color: #c5c4c4;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 400;
 }
 
 :-moz-placeholder {
     color: #c5c4c4;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 400;
 }
 
 :-ms-input-placeholder {
     color: #c5c4c4;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 400;
 }
 
@@ -69,13 +72,13 @@ ul {
 .header > .caption {
     width: 313px;
     height: 30px;
-    font-size: 14px;
+    font-size: 1.4rem;
     margin-top: 18px;
 }
 
 .contacts span {
     color: #1d9dec;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
 }
 
@@ -84,7 +87,7 @@ ul {
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
     color: #ffffff;
     font-family: "PT Sans";
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 700;
     text-decoration: none;
     line-height: 26px;
@@ -138,7 +141,7 @@ nav {
 .menu-item {
     position: relative;
     color: #fff;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 40px;
     padding: 10px 50px;
@@ -284,7 +287,7 @@ nav {
     background-image: linear-gradient(to top, #2697db 0%, #7db8f2 100%);
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
     color: #fff;
-    font-size: 22px;
+    font-size: 2.2rem;
     font-weight: 700;
     text-align: center;
     padding-top: 5px;
@@ -294,7 +297,7 @@ nav {
     width: 200px;
     height: 217px;
     color: #4ca5e5;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 700;
     line-height: 24px;
     text-align: center;
@@ -303,7 +306,7 @@ nav {
 }
 
 .date__numbers-big {
-    font-size: 110px;
+    font-size: 11rem;
 }
 
 .register {
@@ -351,14 +354,14 @@ nav {
     width: 199px;
     height: 52px;
     color: #747474;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 700;
     text-align: center;
     margin: 24px auto 29px auto;
 }
 
 .register__notice {
-    font-size: 10px;
+    font-size: 1rem;
     color: #747474;
     font-weight: 700;
     margin: 5px auto 0 auto;
@@ -409,7 +412,7 @@ nav {
     outline: none;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
     color: #fff;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 700;
     border-radius: 4px;
     margin: 20px auto 0 auto;
@@ -421,7 +424,7 @@ nav {
 
 .underVideo {
     width: 470px;
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 
 .underVideo:before,
@@ -446,7 +449,7 @@ nav {
     margin-top: 20px;
     background-color: #fff;
     color: #515151;
-    font-size: 12px;
+    font-size: 1.2rem;
     font-weight: 400;
     line-height: 18px;
     border-radius: 5px;
@@ -462,7 +465,7 @@ nav {
 .course__caption {
     text-align: center;
     color: #222121;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 16px;
     background-color: #f0f0f0;
@@ -482,7 +485,7 @@ nav {
 .title_section,
 .slide__name {
     color: #4d535e;
-    font-size: 22px;
+    font-size: 2.2rem;
     font-weight: 700;
     text-align: center;
     margin: 30px 0 30px 0;
@@ -497,13 +500,13 @@ nav {
 }
 
 .facts > span {
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 700;
 }
 
 .facts {
     color: #fff;
-    font-size: 12px;
+    font-size: 1.2rem;
     font-weight: 400;
     margin-top: 20px;
     height: 58px;
@@ -618,7 +621,7 @@ nav {
 
 .slide__text {
     width: 453px;
-    font-size: 14px;
+    font-size: 1.4rem;
     float: right;
 }
 
@@ -647,7 +650,7 @@ nav {
     float: right;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
     color: #fff;
-    font-size: 22px;
+    font-size: 2.2rem;
     font-weight: 700;
     line-height: 45px;
     text-align: center;
@@ -706,7 +709,7 @@ nav {
 
 .underComments {
     width: 410px;
-    font-size: 13px;
+    font-size: 1.3rem;
     padding: 15px;
 }
 
@@ -736,13 +739,11 @@ nav {
 }
 
 .directionSliders {
-    /*    border: 1px solid black;*/
     width: 410px;
     height: 486px;
 }
 
 .directionDescription {
-    /*    border: 1px solid black;*/
     width: 410px;
     height: 486px;
 }
@@ -758,7 +759,7 @@ nav {
 .directionDescription__description {
     width: 412px;
     height: 115px;
-    font-size: 14px;
+    font-size: 1.4rem;
     margin-bottom: 0;
     float: right;
     margin-top: 0;
@@ -785,7 +786,7 @@ nav {
 .selectBusiness_btn {
     width: 159px;
     height: 26px;
-    font-size: 12px;
+    font-size: 1.2rem;
     line-height: 26px;
     margin: 11px 0 15px 0;
 }
@@ -793,7 +794,6 @@ nav {
 .certificate {
     width: 160px;
     height: 246px;
-    /*    border: 1px solid black;*/
     background: url(img/certificate.png) no-repeat;
     position: relative;
     margin-bottom: 10px;
@@ -856,14 +856,14 @@ nav {
     height: 100px;
     text-align: center;
     color: #369ddf;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 700;
     margin-top: 112px;
 }
 
 .offer__text span {
     color: #fff;
-    font-size: 24px;
+    font-size: 2.4rem;
 }
 
 .offer__register {
@@ -884,7 +884,7 @@ nav {
 
 .offerRegister__counter {
     color: #747474;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 700;
     text-align: center;
     margin-top: 12px;
@@ -908,7 +908,7 @@ nav {
 .footer > .caption {
     width: 475px;
     height: 50px;
-    font-size: 13px;
+    font-size: 1.3rem;
     margin-top: 30px;
 }
 
@@ -919,9 +919,6 @@ nav {
     right: 70px;
     width: 50px;
     height: 50px;
-    line-height: 30px;
-    vertical-align: middle;
-    font-size: 0.8em;
     background: #eee url(img/to-top.png) no-repeat center top;
     background-size: contain;
     cursor: pointer;
