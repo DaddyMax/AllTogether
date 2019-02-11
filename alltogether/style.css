@@ -86,7 +86,6 @@ ul {
     display: block;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
     color: #ffffff;
-    font-family: "PT Sans";
     font-size: 1.4rem;
     font-weight: 700;
     text-decoration: none;
@@ -107,7 +106,7 @@ ul {
     box-shadow: 0 0 7px #999;
 }
 
-nav {
+.nav-static {
     position: sticky;
     top: 0;
     z-index: 999;
@@ -123,6 +122,9 @@ nav {
     background-image: linear-gradient(to top, #2697db 0%, #7db8f2 100%);
     border-radius: 4px;
     position: relative;
+}
+.nav-responsive {
+    display: none;
 }
 
 .nav li:first-child {
@@ -924,4 +926,85 @@ nav {
     cursor: pointer;
     opacity: .5;
     border-radius: 25px;
+}
+
+
+/* Landscape - телефоны */
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+    .header {
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: 40px;
+    }
+    .logo, .caption, .contacts {
+        margin: 0 auto;
+    }
+    .header > .caption {
+        width: 90%;
+        height: 100%;
+        display: block;
+    }
+    .contacts {
+        text-align: center;
+    }
+    .contacts span {
+        display: block;
+        margin: 20px 0 -10px 0;
+    }
+    .contact__button {
+        margin: 0 auto;
+        float: none;
+        width: 100%;
+        height: 50px;
+        box-sizing: border-box;
+        line-height: 45px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .nav-responsive {
+        display: block;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 240px;
+        list-style-type: none;  
+        text-align: center;
+        padding-left: 0;
+        margin-top: -200px;
+        transition: .3s ease margin-top;
+    }
+
+    .menu-item {
+        display: block;
+        width: 100%;
+        padding: 0;
+        background-image: linear-gradient(to top, #2697db 0%, #7db8f2 100%);
+    }
+
+    .nav-responsive:hover {
+        margin-top: 0;
+        transition: all .3s ease;
+    }
+
+    .nav-responsive:hover .menu-toggle {
+        display: none;
+    }
+
+
+}
+
+/* От ландшафтного экрана телефона до потретного планшета */
+@media (max-width: 767px) {
+
+}
+
+/* От портретного планшета до ландшафтного экрана и настольных дисплеев */
+@media (min-width: 768px) and (max-width: 979px) {
+
 }
