@@ -1,0 +1,186 @@
+html {
+    font-size: 62.5%;
+    min-width: 320px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+h1 {
+	font-size: 6rem;
+	letter-spacing: -3px;
+	font-weight: 700;
+	text-align: center;
+	margin: 100px 0 45px 0;
+}
+header {
+	width: 100%;
+	height: 81px;
+	background-color: #000;
+	color: #fff;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+}
+.wrap {
+	width: 1170px;
+	height: 50px;
+	margin: 0 auto;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: space-between;
+}
+.logo {
+	font-size: 3.0rem;
+	font-weight: 600;
+	padding-left: 41px;
+	background: url(img/logo_bg.svg) no-repeat left center;
+}
+.nav ul li {
+	display: inline-block;
+}
+.nav a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.9rem;
+	margin: 0 9px;
+	transition: all .3s;
+}
+.nav a:hover {
+	color: #ffc000;
+	border-bottom: 2px solid #ffc000;
+}
+.call_btn {
+	width: 120px;
+	height: 36px;
+	background-color: #000;
+	color: #fff;
+	border: 2px solid #ffc000;
+	border-radius: 15px;
+	text-transform: uppercase;
+	outline: none;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 1.2rem;
+	transition: all .2s;
+}
+.call_btn:hover {
+	background-color: #ffc000;
+	color: #000;
+}
+.slider {
+	background-color: #121212;
+	width: 100%;
+	height: 779px;
+}
+.about {
+	width: 100%;
+	background: url(img/about_bg.png) no-repeat bottom center / cover;
+	padding-bottom: 120px;
+}
+.sub_h1 {
+	text-align: center;
+	font-size: 1.8rem;
+	width: 960px;
+	margin: 0 auto 70px auto;
+	color: #666;
+}
+.about__video {
+	width: 1170px;
+	height: 500px;
+	background-color: #000;
+	margin: 0 auto 0 auto;
+}
+.about_advantages {
+	width: 100%;
+	background-color: #000;
+	color: #fff;
+}
+.about_advantages .wrap {
+	justify-content: space-around;
+	height: 100%;
+	padding: 110px 0;
+}
+.advantage {
+	width: 255px;
+	text-align: center;
+}
+.icons {
+	width: 60px;
+	height: 60px;
+	margin: 0 auto;
+}
+.advIcon_1 {
+	background: url(img/about_icon_1.svg) no-repeat center center;
+}
+.advIcon_2 {
+	background: url(img/about_icon_2.svg) no-repeat center center;
+}
+.advIcon_3 {
+	background: url(img/about_icon_3.svg) no-repeat center center;
+}
+.advIcon_4 {
+	background: url(img/about_icon_4.svg) no-repeat center center;
+}
+
+.advantage__caption {
+	font-size: 3rem;
+	font-weight: 600;
+	margin: 40px 0 30px 0;
+}
+.advantage__text {
+	font-size: 1.4rem;
+}
+.services {
+	margin-bottom: 60px;
+}
+.services .sub_h1 {
+	width: 500px;
+}
+.services .wrap {
+	flex-wrap: wrap;height: 100%;
+}
+.service {
+	width: 23%;
+	margin-bottom: 60px;
+	padding-left: 90px;
+}
+.service__caption {
+	font-size: 2.4rem;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+.service__text {
+	color: #aaa;
+	font-size: 1.4rem;
+}
+
+.servIcon_1 {
+	background: url(img/services_icon_1.svg) no-repeat left 8px;	
+}
+.servIcon_2 {
+	background: url(img/services_icon_2.svg) no-repeat left 8px;	
+}
+.servIcon_3 {
+	background: url(img/services_icon_3.svg) no-repeat left 8px;	
+}
+.servIcon_4 {
+	background: url(img/services_icon_4.svg) no-repeat left 8px;	
+}
+.servIcon_5 {
+	background: url(img/services_icon_5.svg) no-repeat 15px 8px;	
+}
+.servIcon_6 {
+	background: url(img/services_icon_6.svg) no-repeat 5px 8px;	
+}
+.team {
+	width: 100%;
+	background-color: #ffcf3c;
+}
+.team .sub_h1 {
+	width: 550px;
+	color: #000;
+}
