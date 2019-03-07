@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,36 +10,25 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<!--нерабочий счетчик-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script src="countdown/js/jquery.countdown.js"></script>
-    <link href="countdown/css/media.css" rel="stylesheet" type="text/css"> 
-<!--
+
+    <!-- live reload -->
+    <link href="countdown/css/media.css" rel="stylesheet" type="text/css">
     <script>
-        $(function() {
-            $(".digits").countdown({
-                image: "countdown/img/my-digits.png",
-                format: "hh:mm",
-                timerEnd: function() {
-                    alert('end!!');
-                }
-            });
-        }); //нерабочий счетчик
+        document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 
     </script>
--->
+    <!-- end of live reload -->
 </head>
-
 <body>
     <header class="header">
-        <div class="logo"></div>
+        <div class="logo" id="focus"></div>
         <div class="caption">Стань профессиональным инвестором или построй прибыльный бизнес в партнерстве с AllToGether</div>
         <div class="contacts">
             <span>8 (342) 000-00-00</span><br>
             <a href="#" class="contact__button">Заказать звонок</a>
         </div>
     </header>
-    <nav>
+    <nav class="nav-static">
         <ul class="nav">
             <li><a href="#1" class="menu-item menu-item-first">Истории успеха</a></li>
             <li><a href="#2" class="menu-item">Видеоотзывы</a></li>
@@ -48,51 +36,60 @@
             <li><a href="#4" class="menu-item">Сертификаты</a></li>
             <li><a href="#5" class="menu-item menu-item-last">Бонус</a></li>
         </ul>
+        <ul class="nav-responsive" id="nav-responsive">
+            <li><a href="#1" class="menu-item" onclick="return CloseMenu(this)" ;>Истории успеха</a></li>
+            <li><a href="#2" class="menu-item" onclick="return CloseMenu(this)" ;>Видеоотзывы</a></li>
+            <li><a href="#3" class="menu-item" onclick="return CloseMenu(this)" ;>Направления бизнеса</a></li>
+            <li><a href="#4" class="menu-item" onclick="return CloseMenu(this)" ;>Сертификаты</a></li>
+            <li><a href="#5" class="menu-item" onclick="return CloseMenu(this)" ;>Бонус</a></li>
+            <li><a href="#6" class="menu-item" id="respMenuBtn" onclick="return OpenMenu(this)" onblur="CloseMenu(this)" ;>Меню</a></li>
+        </ul>
     </nav>
     <div class="wrap">
-        <div class="video"><!--Insert videoplayer here--></div>
+        <div class="videoContainer">
+            <div class="video">
+                <!--Insert videoplayer here-->
+            </div>
+            <div class="underVideo textInBorder">Интернет, 2 апреля 2014 года. НИУ «Высшая школа экономики» и Яндекс открывают факультет компьютерных наук. Он будет готовить специалистов по направлениям «Прикладная математика и информатика» и «Программная инженерия». Деканом факультета станет доктор физико-математических наук Иван Аржанцев, руководивший до этого образовательными проектами Яндекса.
+            </div>
+        </div>
         <div class="date">
             <div class="date__caption">Следующая <br>конференция</div>
             <div class="date__numbers"><span class="date__numbers-big">19</span><br>апреля</div>
         </div>
-        <div class="register">
-            <div class="register__title">Пройдите этап регистрации <br>и получите первую прибыль <br>уже завтра!</div>
-            <input type="text" placeholder="Ваше имя" class="register__name">
-            <input type="text" placeholder="Ваш телефон" class="register__phone">
-            <button class="register__submit">Начать регистрацию</button>
-            <div class="register__notice">Мы гарантируем конфиденциальность Ваших данных!</div>
-        </div>
-    </div>
-    <div class="wrap">
-        <div class="underVideo textInBorder">Интернет, 2 апреля 2014 года. НИУ «Высшая школа экономики» и Яндекс открывают факультет компьютерных наук. Он будет готовить специалистов по направлениям «Прикладная математика и информатика» и «Программная инженерия». Деканом факультета станет доктор физико-математических наук Иван Аржанцев, руководивший до этого образовательными проектами Яндекса.
-        </div>
-        <div class="course">
-            <div class="course__caption">Валюта</div>
-            <div class="course__caption">Курс</div><br>
-            <div class="course__price course__price-name">Курс рубля к евро</div>
-            <div class="course__price">49.10 RUB = 1 EUR</div><br>
-            <div class="course__price course__price-name">Курс рубля к доллару</div>
-            <div class="course__price">35.50 RUB = 1 USD</div><br>
-            <div class="course__price course__price-name">Курс рубля к золоту</div>
-            <div class="course__price">1 481,27 RUB = 1 г</div><br>
+        <div class="registerContainer">
+            <div class="register">
+                <div class="register__title">Пройдите этап регистрации <br>и получите первую прибыль <br>уже завтра!</div>
+                <input type="text" placeholder="Ваше имя" class="register__name">
+                <input type="text" placeholder="Ваш телефон" class="register__phone">
+                <button class="register__submit">Начать регистрацию</button>
+                <div class="register__notice">Мы гарантируем конфиденциальность Ваших данных!</div>
+            </div>
+            <div class="course">
+                <div class="course__caption">Валюта</div>
+                <div class="course__caption">Курс</div><br>
+                <div class="course__price course__price-name">Курс рубля к евро</div>
+                <div class="course__price">49.10 RUB = 1 EUR</div><br>
+                <div class="course__price course__price-name">Курс рубля к доллару</div>
+                <div class="course__price">35.50 RUB = 1 USD</div><br>
+                <div class="course__price course__price-name">Курс рубля к золоту</div>
+                <div class="course__price">1 481,27 RUB = 1 г</div><br>
+            </div>
         </div>
     </div>
     <h1 class="title_section">AllToGether в цифрах</h1>
     <div class="gray_bg">
         <div class="wrap">
-            <div class="facts"><span>2029</span><br> Количество<br> зарегестрировавшихся</div>
+            <div class="facts"><span>2029</span><br> Количество<br> зарегистрировавшихся</div>
             <div class="facts"><span>1514</span><br> С нами<br> уже работают</div>
             <div class="facts"><span>22014</span><br> Оборот<br> компании</div>
-            <div class="facts"><span>1998</span><br> Работаем <br>с 1998 года</div>
+            <div class="facts"><span>1998</span><br> Работаем <br>с&nbsp;1998 года</div>
             <div class="facts"><span>114</span><br> Динамика<br> роста</div>
         </div>
     </div>
     <h1 class="title_section" id="1">Истории успеха</h1>
     <div class="slider_bg">
         <div class="wrap sliderbox">
-
-            <!--            тут будет слайдер             -->
-
             <div class="slider">
                 <div class="slide">
                     <div class="slide__containerPhoto">
@@ -125,50 +122,60 @@
                     </div>
                 </div>
             </div>
-
-            <!--            тут будет слайдер             -->
-
         </div>
     </div>
     <h1 class="title_section" id="2">Видеоотзывы</h1>
     <div class="wrap wrap-comments">
-        <div class="comments"><!--Insert videoplayer here--></div>
-        <div class="comments"><!--Insert videoplayer here--></div>
-    </div>
-    <div class="wrap wrap-comments">
-        <div class="underComments textInBorder">Чу, который заставлял его создать оружие <br> массового поражения - только тогда он получил бы операцию, необходимую для спасения его жизни. </div>
-        <div class="underComments textInBorder">Чу, который заставлял его создать оружие <br> массового поражения - только тогда он получил бы операцию, необходимую для спасения его жизни. </div>
+        <div>
+            <div class="comments">
+                <!--Insert videoplayer here-->
+            </div>
+            <div class="underComments textInBorder">Чу, который заставлял его создать оружие <br> массового поражения - только тогда он получил бы операцию, необходимую для спасения его жизни. </div>
+        </div>
+        <div>
+            <div class="comments">
+                <!--Insert videoplayer here-->
+            </div>
+            <div class="underComments textInBorder">Чу, который заставлял его создать оружие <br> массового поражения - только тогда он получил бы операцию, необходимую для спасения его жизни. </div>
+        </div>
     </div>
     <h1 class="title_section" id="3">Выбери свой бизнес с AllToGether</h1>
     <div class="wrap selectBusiness">
-        <div class="directionSliders">
-            <div class="directionSliders__slider">
+        <div class="direction">
+            <div class="direction__slider">
                 <img src="img/business_slide_1.jpg" alt="" class="businessDirImg">
                 <img src="img/business_slide_2.jpg" alt="" class="businessDirImg">
                 <img src="img/business_slide_3.jpg" alt="" class="businessDirImg">
             </div>
-            <div class="directionSliders__slider">
-                <img src="img/business_slide_2.jpg" alt="" class="businessDirImg">
-                <img src="img/business_slide_3.jpg" alt="" class="businessDirImg">
-                <img src="img/business_slide_1.jpg" alt="" class="businessDirImg">
-            </div>
-            <div class="directionSliders__slider">
-                <img src="img/business_slide_3.jpg" alt="" class="businessDirImg">
-                <img src="img/business_slide_1.jpg" alt="" class="businessDirImg">
-                <img src="img/business_slide_2.jpg" alt="" class="businessDirImg">
-            </div>
+            <div class="direction__description textInBorder">Тони Старк — сын богатого промышленника, гений, миллиардер, плейбой, филантроп. Он унаследовал бизнес отца в возрасте 21 года, превратив компанию в одного из лидирующих производителей оружия. Старк был ранен осколком в грудь в Азии и пленен.</div>
+            <button class="slide__submit selectBusiness_btn">Выбрать направление</button>
         </div>
-        <div class="directionDescription">
-            <div class="directionDescription__description textInBorder">Тони Старк — сын богатого промышленника, гений, миллиардер, плейбой, филантроп. Он унаследовал бизнес отца в возрасте 21 года, превратив компанию в одного из лидирующих производителей оружия. Старк был ранен осколком в грудь в Азии и пленен.</div>
+        <div class="direction">
+            <div class="direction__slider">
+                <img src="img/business_slide_2.jpg" alt="" class="businessDirImg">
+                <img src="img/business_slide_3.jpg" alt="" class="businessDirImg">
+                <img src="img/business_slide_1.jpg" alt="" class="businessDirImg">
+            </div>
+            <div class="direction__description textInBorder">Тони Старк — сын богатого промышленника, гений, миллиардер, плейбой, филантроп. Он унаследовал бизнес отца в возрасте 21 года, превратив компанию в одного из лидирующих производителей оружия. Старк был ранен осколком в грудь в Азии и пленен.</div>
             <button class="slide__submit selectBusiness_btn">Выбрать направление</button>
-            <div class="directionDescription__description textInBorder">Тони Старк — сын богатого промышленника, гений, миллиардер, плейбой, филантроп. Он унаследовал бизнес отца в возрасте 21 года, превратив компанию в одного из лидирующих производителей оружия. Старк был ранен осколком в грудь в Азии и пленен.</div>
-            <button class="slide__submit selectBusiness_btn">Выбрать направление</button>
-            <div class="directionDescription__description textInBorder">Тони Старк — сын богатого промышленника, гений, миллиардер, плейбой, филантроп. Он унаследовал бизнес отца в возрасте 21 года, превратив компанию в одного из лидирующих производителей оружия. Старк был ранен осколком в грудь в Азии и пленен.</div>
+        </div>
+        <div class="direction">
+            <div class="direction__slider">
+                <img src="img/business_slide_3.jpg" alt="" class="businessDirImg">
+                <img src="img/business_slide_1.jpg" alt="" class="businessDirImg">
+                <img src="img/business_slide_2.jpg" alt="" class="businessDirImg">
+            </div>
+            <div class="direction__description textInBorder">Тони Старк — сын богатого промышленника, гений, миллиардер, плейбой, филантроп. Он унаследовал бизнес отца в возрасте 21 года, превратив компанию в одного из лидирующих производителей оружия. Старк был ранен осколком в грудь в Азии и пленен.</div>
             <button class="slide__submit selectBusiness_btn">Выбрать направление</button>
         </div>
     </div>
     <h1 class="title_section" id="4">Сертификаты</h1>
-    <div class="wrap wrap-certificate">
+    <div class="wrap wrap-certificate certificate-resp" id="certificate">
+        <div class="certificate" id="s1" style="z-index: 0;"></div>
+        <div class="certificate" id="s2" style="z-index: 0;"></div>
+        <div class="certificate" id="s3" style="z-index: 0;"></div>
+    </div>
+    <div class="wrap wrap-certificate certificate-desk" id="certificate">
         <div class="certificate"></div>
         <div class="certificate"></div>
         <div class="certificate"></div>
@@ -177,19 +184,20 @@
     <div class="gray_bg gray_bg-wide">
         <div class="wrap offer">
             <div class="offer__book"></div>
-            <div class="offer__text">Зарегестрируйся прямо сейчас<br>и получи бесплатное пособие<br><span>“Как заработать 100 000 рублей<br>за первые 30 дней с AllToGether”</span></div>
+            <div class="offer__text">Зарегистрируйся прямо сейчас<br>и получи бесплатное пособие<br><span>“Как заработать 100 000 рублей<br>за первые 30 дней с AllToGether”</span></div>
             <div class="offer__register register">
                 <div class="offerRegister__counter">До конца акции осталось</div>
 
-                <!--            тут будет счетчик             -->
+                <!--      тут будет счетчик             ->
+                    Надо переписать. Не забыть почистить стили. Блоки влияют на ширину страницы в адаптивной версии.
                 <div class="wrapper">
                     <div class="cell">
                         <div id="holder">
-                            <div class="digits"></div>
+                            <div class="digits"></div>   
                         </div>
                     </div>
                 </div>
-                <!--            тут будет счетчик             -->
+                <!--            тут будет счетчик   -->
 
                 <input type="text" placeholder="Ваше имя" class="register__name">
                 <input type="text" placeholder="Ваш e-mail" class="register__mail">
@@ -201,32 +209,79 @@
     </div>
     <footer class="wrap footer">
         <div class="logo"></div>
-        <div class="caption">ООО «Джастлайк» Юридический адрес: 109316, г. Перьм, ул. пр-т, д. 43 корп. 3<br>ИНН 7723866731 КПП 772201001<br>ОГРН 1137746246395
+        <div class="caption">ООО «Джастлайк» Юридический адрес: <br>109316, г. Перьм, ул. пр-т, д. 43 корп. 3<br>ИНН 7723866731 КПП 772201001<br>ОГРН 1137746246395
         </div>
         <div class="contacts">
             <span>8 (342) 000-00-00</span><br>
             <a href="#" class="contact__button">Заказать звонок</a>
         </div>
-
     </footer>
     <div id="to-top" title="Перейти наверх"></div>
-
-
 
     <script src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
     <script src="slick/slick.min.js"></script>
     <script>
-        /*sliders*/
+        // maximise certificates in responsible version
+        var container = document.getElementById('certificate');
+        container.onclick = function(event) {
+            if (event.target.className == 'certificate') {
+                var boxId = event.target.id;
+                var box = document.getElementById(boxId);
+                if (box.style.zIndex == "0") {
+                    // box.style.position = "relative"; with it working bad
+                    box.style.top = "0";
+                    box.style.left = "0";
+                    box.style.margin = "60px 0 0 40px";
+                    box.style.zIndex = "1";
+                    box.style.transform = "scale(1.6,1.6)";
+                } else {
+                    box.style.transform = "scale(1,1)";
+                    box.style.position = "absolute";
+                    box.style.margin = "0";
+                    box.style.zIndex = "0";
+                    if (boxId == "s1") {
+                        box.style.top = "0";
+                        box.style.left = "0";
+                    }
+                    if (boxId == "s2") {
+                        box.style.top = "60px";
+                        box.style.left = "40px";
+                    }
+                    if (boxId == "s3") {
+                        box.style.top = "120px";
+                        box.style.left = "80px";
+                    }
+                }
+            }
+        }
+        // open-close adaptive menu
+        function OpenMenu() {
+            var menu = document.getElementById("respMenuBtn");
+            if (menu.text == "Меню") {
+                document.getElementById("nav-responsive").style.marginTop = "0";
+                menu.text = "\u25B2";
+            } else {
+                CloseMenu();
+            }
+        }
+
+        function CloseMenu() {
+            document.getElementById("nav-responsive").style.marginTop = "-200px";
+            document.getElementById("respMenuBtn").text = "Меню";
+        }
+    </script>
+    <script>
+        /*big-slider*/
         $('.slider').slick({
             prevArrow: '<button class="slick-prev" aria-label="Next" type="button">Next</button>',
             nextArrow: '<button class="slick-next" aria-label="Next" type="button">Next</button>',
         });
-
-        $('.directionSliders__slider').slick({
+        /*small-slider*/
+        $('.direction__slider').slick({
             prevArrow: '<button class="slick-arrowprev" aria-label="Previous" type="button">Previous</button>',
             nextArrow: '<button class="slick-arrownext" aria-label="Next" type="button">Next</button>',
         });
-
+        
         /*to-top*/
         $(function() {
             $(window).scroll(function() {
@@ -253,9 +308,6 @@
                 return false;
             });
         });
-
     </script>
-
 </body>
-
 </html>
