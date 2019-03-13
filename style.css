@@ -56,13 +56,13 @@ ul {
     padding-top: 25px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-    background: url(img/logo.png);
-    width: 256px;
+    background: url(img/logo.png) no-repeat left center;
+    width: 230px;
     height: 58px;
-    margin-top: 4px;
 }
 
 .caption {
@@ -75,7 +75,6 @@ ul {
     width: 313px;
     height: 30px;
     font-size: 1.4rem;
-    margin-top: 18px;
 }
 
 .contacts span {
@@ -121,17 +120,16 @@ ul {
     height: 40px;
     margin: 24px auto 23px auto;
     border: 1px solid #fff;
+    background-image: -webkit-linear-gradient(bottom, #2697db 0%, #7db8f2 100%);
+    background-image: -o-linear-gradient(bottom, #2697db 0%, #7db8f2 100%);
     background-image: linear-gradient(to top, #2697db 0%, #7db8f2 100%);
     border-radius: 4px;
     position: relative;
+    padding-left: 0;
 }
 
 .nav-responsive {
     display: none;
-}
-
-.nav li:first-child {
-    margin-left: -40px;
 }
 
 .nav li {
@@ -140,6 +138,8 @@ ul {
 }
 
 .menu-item:hover {
+    background-image: -webkit-linear-gradient(bottom, #2f9add 0%, #2676a8 100%);
+    background-image: -o-linear-gradient(bottom, #2f9add 0%, #2676a8 100%);
     background-image: linear-gradient(to top, #2f9add 0%, #2676a8 100%);
 }
 
@@ -893,8 +893,9 @@ ul {
 }
 
 .footer > .logo {
+    width: 236px;
     height: 90px;
-    background: url(img/justlike.png) no-repeat 80% bottom,
+    background: url(img/justlike.png) no-repeat 90% bottom,
     url(img/logo.png) no-repeat;
 }
 
@@ -923,7 +924,7 @@ ul {
     border-radius: 25px;
 }
 
-/* Landscape - телефоны */
+
 
 @media (max-width: 480px) {
     html {
@@ -935,30 +936,44 @@ ul {
     }
     .header {
         width: 100%;
-        flex-wrap: wrap;
+        flex-wrap: wrap !important;
         margin-top: 40px;
     }
     .logo,
-    .caption,
+    .caption {
+        margin: 0 auto;
+        width: 90% !important;
+        text-align: center;
+        background-position: 40% center;
+        /*background-position: center center;*/
+    }
+    .caption {
+        margin-top: 18px;
+    }
     .contacts {
+        width: 190px !important;
         margin: 0 auto;
     }
+
     .header > .caption {
-        width: 90%;
+        width: 95% !important;
         height: 100%;
         display: block;
+        font-size: 1.4rem !important;
     }
     .contacts {
-        text-align: center;
+        text-align: center !important;
     }
     .contacts span {
         display: block;
+        font-size: 2rem !important;
         margin: 20px 0 -10px 0;
     }
     .contact__button {
         margin: 0 auto;
         float: none;
         width: 100%;
+        max-width: 190px !important;
         height: 45px;
         box-sizing: border-box;
         line-height: 42px;
@@ -981,7 +996,8 @@ ul {
     .menu-item {
         display: block;
         width: 100%;
-        padding: 0;
+        font-size: 1.4rem !important;
+        padding: 0 !important;
         background-image: linear-gradient(to top, #2697db 0%, #7db8f2 100%);
     }
     .course {
@@ -995,6 +1011,7 @@ ul {
     }
     .videoContainer {
         width: 95%;
+        margin-bottom: 0 !important;
     }
     .video {
         width: 100%;
@@ -1004,7 +1021,7 @@ ul {
     }
     .date {
         width: 65%;
-        margin: 30px 0 30px 0;
+        margin: 30px 0 30px 0 !important;
     }
     .date__caption {
         width: 100%;
@@ -1032,14 +1049,17 @@ ul {
         font-size: 1.4rem;
     }
     .gray_bg {
-        height: 100%;
+        height: 100% !important;
+        padding-bottom: 0 !important;
     }
     .gray_bg .wrap {
-        width: 100%;
+        width: 100% !important;
         padding-bottom: 20px;
-        justify-content: center;
+        justify-content: center !important;
     }
     .facts {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
         margin-bottom: 20px;
         width: 47%;
         text-align: center;
@@ -1064,77 +1084,17 @@ ul {
         margin-left: 3%;
         background-position: 15px center;
     }
-    .sliderbox {
-        margin-top: 0;
-        width: 100%;
-        height: 100%;
-    }
-    .slider {
-        width: 100%;
-        height: 100%;
-    }
-    .slide {
-        width: 100%;
-    }
-    .slide > div {
-        float: none;
-        margin: 0 auto;
-    }
-    .slide__containerPhoto {
-        width: 160px;
-        height: 200px;
-    }
-    .slide__containerText {
-        width: 90%;
-    }
-    .slide__photo {
-        width: 160px;
-        height: 160px;
-        border-radius: 80px;
-        background-position: -10px 5px;
-        margin-top: 15px;
-    }
-    .slide__name {
-        margin-top: 3px;
-    }
-    .slide__text {
-        width: 60%;
-    }
-    .slide__text {
-        width: 100%;
-        font-size: 1.15rem;
-        margin-top: 10px;
-    }
-    .slide__text:before,
-    .slide__text:after {
-        content: '';
-        position: absolute;
-        top: -20px;
-        left: calc(47%);
-        border: 10px solid transparent;
-        border-bottom: 10px solid #e2e2e2;
-    }
-    .slide__text:after {
-        border-bottom: 10px solid #fff;
-        top: -19px;
-    }
     .slide__submit {
-        width: 200px;
-        height: 40px;
-        line-height: 35px;
-        margin-top: 10px;
-        font-size: 1.4rem;
+        font-size: 1.4rem !important;
+    }
+    .slide__text {
+        font-size: 1.15rem !important;
     }
     .slick-next {
-        right: 0px;
-        top: 180px;
-        opacity: .5;
+        right: 0 !important;
     }
     .slick-prev {
-        left: 0px;
-        top: 180px;
-        z-index: 1;
-        opacity: .5;
+        left: 0 !important;
     }
     .wrap-comments {
         width: 95%;
@@ -1190,6 +1150,369 @@ ul {
     .selectBusiness_btn {
         font-size: 1.15rem;
     }
+    .offer__book {
+        margin-top: 20px;
+    }
+    .offer__text {
+        font-size: 1.5rem;
+        margin: 25px 0;
+    }
+    .offer__text span {
+        color: #fff;
+        font-size: 1.8rem;
+    }
+    .offer__register {
+        width: 75%;
+    }
+    .offerRegister__counter {
+        margin-bottom: 50px;
+        /* отступ вместо счетчика */
+    }
+    .gray_bg-wide {
+        margin-bottom: 0;
+    }
+    .footer {
+        padding-top: 0;
+    }
+    .footer .logo {
+        width: 236px !important;
+    }
+    .footer > .caption {
+        margin: 30px 0 15px 0 !important;
+    }
+    .footer > .caption > br {
+        display: block;
+    }
+    .footer > .contacts {
+        margin-bottom: 60px;
+    }
+}
+
+@media (min-width: 680px) and (max-width: 867px) {
+    .slide__containerText {
+        width: 66%  !important;
+    }
+    .slide__text {
+        margin-top: 0;
+    }
+    .slide__submit {
+        width: 200px;
+        height: 40px;
+        line-height: 35px;
+        margin-top: 10px;
+        font-size: 1.7rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 840px) {
+    .wrap-comments {
+        width: 90% !important;
+    }
+    .wrap-comments div:nth-child(2) {
+        margin-bottom: 30px;
+    }
+    .direction {
+        width: 82%;
+    }
+    .direction__description {
+        width: 77% !important; 
+        margin-top: 20px;   
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        width: 95%;
+        padding-top: 15px;
+    }
+    header > .caption {
+        width: 35% !important;
+        height: 100% !important;
+        font-size: 1.2rem !important;
+    }
+    header > .logo {
+        width: 35%;
+        background-size: contain;
+    }
+    .contacts span {
+        font-size: 1.5rem;
+    }
+    .footer .contacts span {
+        font-size: 2rem;
+    }
+    .contacts {
+        width: 27%;
+        text-align: right;
+    }
+    .contact__button {
+        width: 100%;
+        max-width: 147px;
+    }
+    .nav {
+        width: 100%;
+        justify-content: space-around;
+        margin: 15px auto 15px auto;
+    }
+    .menu-item {
+        padding: 10px 0;
+        font-size: 1.3rem;
+    }
+    .menu-item:hover { 
+        background-image: linear-gradient(to top, #2697db 0%, #7db8f2 100%);
+    }
+    .wrap-video {
+        width: 470px !important;
+        justify-content: space-around !important;
+        flex-wrap: wrap;
+    }
+    .videoContainer {
+        margin-bottom: 20px;
+    }
+    .date {
+        margin-right: 0 !important;
+        margin-bottom: 20px;
+    }
+    .course {
+        display: none;
+    }
+    .gray_bg .wrap {
+        width: 80%;
+        justify-content: space-around !important;
+    }
+    .gray_bg {
+        height: 100%;
+        padding-bottom: 20px;
+    }
+    .facts {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .facts:first-child {
+        order: 1;
+    }
+    .slide__text {
+        margin-top: 5px !important;
+        font-size: 1.25rem;
+    }
+    .slide__containerText {
+        width: 60% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrap-video {
+        width: 100% !important;
+    }
+    .direction .slide__submit {
+        width: 200px;
+        height: 40px;
+        line-height: 35px;
+        font-size: 1.15rem !important;
+    }
+    .menu-item:hover {
+        background-image: -webkit-linear-gradient(bottom, #2f9add 0%, #2676a8 100%) !important;
+        background-image: -o-linear-gradient(bottom, #2f9add 0%, #2676a8 100%) !important;
+        background-image: linear-gradient(to top, #2f9add 0%, #2676a8 100%) !important;
+    }
+}
+
+@media (min-width: 702px) and (max-width: 767px) {
+    .wrap {
+        width: 80%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 979px) {
+    .header {
+        width: 95%;
+    }
+    .nav {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .menu-item {
+        padding: 10px 0;
+    }
+    .menu-item:hover { 
+        background-image: linear-gradient(to top, #2697db 0%, #7db8f2 100%);
+    }
+    .wrap {
+        width: 70%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .videoContainer {
+        margin-bottom: 20px;
+    }
+    .date {
+        margin-right: 30px;
+    }
+    .course {
+        display: none;
+    }
+    .gray_bg .wrap {
+        width: 93%;
+        justify-content: space-between;
+    }
+    .sliderbox {
+        width: 90%;
+        height: 100%;
+    }
+    .slider {
+        width: 100%;
+        height: 100%;
+    }
+    .slide {
+        width: 100%;
+        padding: 0 1%;
+    }
+    .slide__containerText {
+        width: 70%;
+    }
+    .slide__text {
+        width: 95%;
+     }
+    .slick-next {
+        right: 0px;
+        top: 105px;
+    }
+    .slick-prev {
+        left: 0px;
+        top: 105px;
+        z-index: 1;
+    }
+    .wrap-comments {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .selectBusiness {
+        width: 100%;
+        justify-content: center !important;
+    }
+    .direction .slide__submit {
+        width: 159px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 1.25rem !important;
+    }
+    .direction__description {
+        width: 45%;
+        min-width: 350px;
+    }
+    .certificate-desk {
+        width: 100%;
+        justify-content: center !important;
+    }
+    .certificate:nth-child(2) {
+        margin: 0 50px 0 50px;
+    }
+    .offer {
+        width: 98% !important;
+        justify-content: space-around !important;
+        height: 100%;
+    }
+    .offer__text {
+        order: -1;
+        width: 90%;
+        margin: 30px 0 30px 0;
+    }
+    .offer__book {
+        margin-bottom: 10px;
+        margin-right: 15px;
+    }
+    .offer__register {
+        margin-bottom: 10px;
+    }
+    .gray_bg-wide {
+        height: 100%;
+        padding-bottom: 20px;
+    }
+    .footer {
+        width: 85%;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .footer .caption {
+        order: 1;
+    }
+    .footer .contacts {
+        margin-top: 0;
+        width: 160px;
+    }
+}
+@media (max-width: 679px) {
+    .sliderbox {
+        margin-top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .slider {
+        width: 100%;
+        height: 100%;
+    }
+    .slide {
+        width: 100%;
+    }
+    .slide > div {
+        float: none;
+        margin: 0 auto;
+    }
+    .slide__containerPhoto {
+        width: 160px;
+        height: 200px;
+    }
+    .slide__containerText {
+        width: 90% !important;
+    }
+    .slide__photo {
+        width: 160px;
+        height: 160px;
+        border-radius: 80px;
+        background-position: -10px 5px;
+        margin-top: 15px;
+    }
+    .slide__name {
+        margin-top: 3px;
+    }
+    .slide__text {
+        width: 60%;
+    }
+    .slide__text {
+        width: 100%;
+        font-size: 1.3rem;
+        margin-top: 10px !important;
+    }
+    .slide__text:before,
+    .slide__text:after {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: calc(47%);
+        border: 10px solid transparent;
+        border-bottom: 10px solid #e2e2e2;
+    }
+    .slide__text:after {
+        border-bottom: 10px solid #fff;
+        top: -19px;
+    }
+    .slide__submit {
+        width: 200px;
+        height: 40px;
+        line-height: 35px;
+        margin-top: 10px;
+        font-size: 1.7rem;
+    }
+    .slick-next {
+        right: 5%;
+        top: 180px;
+        opacity: .5;
+    }
+    .slick-prev {
+        left: 5%;
+        top: 180px;
+        z-index: 1;
+        opacity: .5;
+    }
     .certificate-resp {
         display: flex;
     }
@@ -1229,38 +1552,14 @@ ul {
         top: 120px;
         left: 80px;
     }
-    .offer__book {
-        margin-top: 20px;
-    }
-    .offer__text {
-        font-size: 1.5rem;
-        margin: 25px 0;
-    }
-    .offer__text span {
-        color: #fff;
-        font-size: 1.8rem;
-    }
-    .offer__register {
-        width: 75%;
-    }
-    .offerRegister__counter {
-        margin-bottom: 50px;
-        /* отступ вместо счетчика */
-    }
-    .gray_bg-wide {
-        margin-bottom: 0;
-    }
     .footer {
-        padding-top: 0;
+        justify-content: space-around;
     }
-    .footer > .caption {
-        margin: 30px 0 15px 0;
+    .footer .caption {
+        margin: 30px auto 50px auto;
     }
-    .footer > .caption > br {
-        display: block;
-    }
-    .footer > .contacts {
-        margin-bottom: 60px;
+    .footer .contacts span {
+        font-size: 2rem;
     }
     #to-top {
         bottom: 0;
@@ -1273,10 +1572,3 @@ ul {
     }
 }
 
-/* От ландшафтного экрана телефона до потретного планшета */
-
-@media (max-width: 767px) {}
-
-/* От портретного планшета до ландшафтного экрана и настольных дисплеев */
-
-@media (min-width: 768px) and (max-width: 979px) {}
