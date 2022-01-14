@@ -1283,6 +1283,9 @@ ul {
     .footer > .contacts {
         margin-bottom: 60px;
     }
+    #button_bottom {
+        margin-bottom: 60px;
+    }
 }
 
 @media (min-width: 680px) and (max-width: 867px) {
@@ -1718,9 +1721,6 @@ ul {
     }
     .footer .contacts span {
         font-size: 2rem;
-    }
-    #button_bottom {
-        margin-bottom: 60px;
     }
     #to-top {
         bottom: 0;
