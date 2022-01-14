@@ -1719,6 +1719,9 @@ ul {
     .footer .contacts span {
         font-size: 2rem;
     }
+    .button_bottom {
+        margin-bottom: 60px;
+    }
     #to-top {
         bottom: 0;
         left: 0;
